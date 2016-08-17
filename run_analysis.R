@@ -3,7 +3,7 @@ packages <- c("dplyr", "tidyr", "stringr")
 sapply(packages, require, character.only=TRUE, quietly=TRUE)
 
 # Set working directory
-dir <- "/Users/davidpaolella/OnlineCourses/DataScienceJH/GettingCleaningData/Getting-Cleaning-Data-Course-Project/UCI HAR Dataset"
+dir <- "insert pathname here"
 setwd(dir)
 
 # Import data
