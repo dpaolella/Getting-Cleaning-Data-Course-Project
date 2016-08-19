@@ -52,4 +52,4 @@ tidy <- dt %>%
   summarise(avg = mean(value))
 
 # Write tidy data set to tab-delimited file
-write.table(tidy, "tidy.txt", sep="\t")
+write.table(tidy, "tidy.txt", sep="\t", row.name=FALSE)
