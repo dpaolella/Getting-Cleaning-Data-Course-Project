@@ -1,5 +1,4 @@
-Getting and Cleaning Data Course Project
-===
+# README: Getting and Cleaning Data Course Project
 
 ### Author: David Paolella (https://github.com/dpaolella/Getting-Cleaning-Data-Course-Project)
 
