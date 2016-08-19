@@ -2,25 +2,21 @@
 packages <- c("dplyr", "tidyr", "stringr")
 sapply(packages, require, character.only=TRUE, quietly=TRUE)
 
-# Set working directory
-dir <- "insert pathname here"
-setwd(dir)
-
 # Import data
-features <- read.table("./UCI HAR Dataset/features.txt")
+features <- read.table("./features.txt")
 features <- as.vector(features$V2)
 features <- c("subject", "label", features)
 
-activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt")
+activity_labels <- read.table("./activity_labels.txt")
 activity_labels <- rename(activity_labels, label = V1, activity = V2)
 
-x_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
-y_test <- read.table("./UCI HAR Dataset/test/y_test.txt")
-subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
+x_test <- read.table("./X_test.txt")
+y_test <- read.table("./y_test.txt")
+subject_test <- read.table("./subject_test.txt")
 
-x_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
-y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
-subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
+x_train <- read.table("./X_train.txt")
+y_train <- read.table("./y_train.txt")
+subject_train <- read.table("./subject_train.txt")
 
 # Stack test and train data
 test <- cbind(subject_test, y_test, x_test)
